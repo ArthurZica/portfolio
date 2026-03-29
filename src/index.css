@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-mono antialiased;
+    background-color: #050a05;
+    color: #c8f5da;
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(57, 211, 83, 0.012) 2px,
+      rgba(57, 211, 83, 0.012) 4px
+    );
+  }
+}
+
+@layer utilities {
+  .cursor-blink::after {
+    content: '_';
+    color: #57e470;
+    animation: blink 1s step-end infinite;
+  }
+
+  .glow {
+    text-shadow: 0 0 20px rgba(57, 211, 83, 0.5), 0 0 60px rgba(57, 211, 83, 0.15);
+  }
+
+  .glow-sm {
+    text-shadow: 0 0 8px rgba(116, 217, 136, 0.4);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
