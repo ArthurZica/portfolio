@@ -8,7 +8,7 @@ function ProjectCard({ title, description, techs, github, demo, image }) {
       <TerminalWindow title={`${slug}/`}>
 
         {/* Imagem / placeholder */}
-        <div className="relative h-36 overflow-hidden bg-black/40 border-b border-accent/15">
+        <div className="relative h-36 overflow-hidden bg-bg-primary border-b border-accent/15">
           {image ? (
             <img
               src={image}

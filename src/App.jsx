@@ -4,10 +4,12 @@ import About from './sections/About'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import Contact from './sections/Contact'
+import PhosphorGrid from './components/PhosphorGrid'
 
 function App() {
   return (
-    <div className="bg-bg-primary">
+    <div className="relative z-0 bg-bg-primary">
+      <PhosphorGrid />
       <Navbar />
 
       <Hero />
