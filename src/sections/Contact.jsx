@@ -21,7 +21,7 @@ function Contact() {
             <Typewriter text=" ./contact.sh" speed={45} started={visible} className="text-terminal-text/60" />
           </p>
           <p className="text-xs text-terminal-muted mt-1">
-            <span className="text-accent/40">// aberto a oportunidades, freelas e parcerias</span>
+            <span className="text-accent/60">// aberto a oportunidades, freelas e parcerias</span>
           </p>
         </div>
 
@@ -33,14 +33,14 @@ function Contact() {
                 href={href}
                 target={label !== 'E-mail' ? '_blank' : undefined}
                 rel={label !== 'E-mail' ? 'noopener noreferrer' : undefined}
-                className="flex items-center gap-3 px-4 py-3 border border-accent/15 bg-bg-primary
-                  text-terminal-muted hover:border-accent/40 hover:text-accent-light
+                className="flex items-center gap-3 px-4 py-4 border border-accent/30 bg-bg-primary
+                  hover:border-accent hover:shadow-[0_0_12px_rgba(74,222,128,0.2)]
                   transition-all duration-200"
               >
-                <span className="text-accent/40 text-xs shrink-0">$ {prompt}</span>
+                <span className="text-accent text-sm shrink-0">$ {prompt}</span>
                 <div className="flex flex-col min-w-0">
-                  <span className="text-xs text-terminal-muted/60">{label}</span>
-                  <span className="text-xs text-accent/60 truncate">{display}</span>
+                  <span className="text-xs text-accent-light font-bold">{label}</span>
+                  <span className="text-xs text-accent/70 truncate">{display}</span>
                 </div>
               </a>
             ))}
