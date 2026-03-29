@@ -1,25 +1,6 @@
 import { useState } from 'react'
-import social from '../data/social'
+import contactLinks from '../data/contact'
 import TerminalWindow from '../components/TerminalWindow'
-
-const EMAIL = 'arthuraugustozica@gmail.com'
-
-const linkedin = social.find((s) => s.icon === 'linkedin')
-
-const contactLinks = [
-  {
-    label: 'E-mail',
-    href: `mailto:${EMAIL}`,
-    display: EMAIL,
-    prompt: 'mailto',
-  },
-  {
-    label: 'LinkedIn',
-    href: linkedin.href,
-    display: linkedin.display,
-    prompt: 'open',
-  },
-]
 
 const initialFields = { name: '', email: '', message: '' }
 
@@ -56,7 +37,7 @@ function Field({ id, label, error, children }) {
         <p
           id={`${id}-error`}
           role="alert"
-          className="text-xs text-red-500/80 pl-[72px]"
+          className="text-xs text-terminal-muted pl-[72px]"
         >
           [ERR] {error}
         </p>
@@ -143,7 +124,7 @@ function Contact() {
                     value={fields.name} onChange={handleChange}
                     aria-invalid={!!errors.name}
                     aria-describedby={errors.name ? 'name-error' : undefined}
-                    className={`${inputBase} ${errors.name ? 'border-red-500/50' : 'border-accent/20'}`}
+                    className={`${inputBase} ${errors.name ? 'border-accent/60' : 'border-accent/20'}`}
                   />
                 </Field>
 
@@ -154,7 +135,7 @@ function Contact() {
                     value={fields.email} onChange={handleChange}
                     aria-invalid={!!errors.email}
                     aria-describedby={errors.email ? 'email-error' : undefined}
-                    className={`${inputBase} ${errors.email ? 'border-red-500/50' : 'border-accent/20'}`}
+                    className={`${inputBase} ${errors.email ? 'border-accent/60' : 'border-accent/20'}`}
                   />
                 </Field>
 
@@ -165,7 +146,7 @@ function Contact() {
                     value={fields.message} onChange={handleChange}
                     aria-invalid={!!errors.message}
                     aria-describedby={errors.message ? 'message-error' : undefined}
-                    className={`${inputBase} resize-none ${errors.message ? 'border-red-500/50' : 'border-accent/20'}`}
+                    className={`${inputBase} resize-none ${errors.message ? 'border-accent/60' : 'border-accent/20'}`}
                   />
                 </Field>
 

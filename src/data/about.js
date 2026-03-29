@@ -1,7 +1,7 @@
 const about = {
   name: 'Arthur Zica',
   role: 'Desenvolvedor Web Full Stack',
-  photo: null, // substitua por: '/assets/foto.jpg'
+  photo: '/assets/foto.jpeg',
   photoAlt: 'Foto de Arthur Zica',
   paragraphs: [
     'Sou um desenvolvedor web apaixonado por construir produtos digitais que combinam boa experiência de usuário com código limpo e performático.',

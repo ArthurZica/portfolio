@@ -8,22 +8,23 @@ export default {
     extend: {
       colors: {
         bg: {
-          primary:   '#050a05',
-          secondary: '#0c130c',
+          primary:   '#0a0f0a',
+          secondary: '#0f1a0f',
         },
         accent: {
-          DEFAULT: '#39d353',
-          light:   '#74d988',
-          bright:  '#57e470',
+          DEFAULT: '#4ade80',
+          light:   '#86efac',
+          bright:  '#86efac',
         },
         terminal: {
-          text:  '#c8f5da',
-          muted: '#3d7a56',
+          text:   '#4ade80',
+          muted:  '#166534',
+          cursor: '#4ade80',
         },
       },
       fontFamily: {
-        sans: ['"Space Mono"', 'monospace'],
-        mono: ['"Space Mono"', 'monospace'],
+        sans: ['"JetBrains Mono"', 'monospace'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },

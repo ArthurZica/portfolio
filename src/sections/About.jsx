@@ -25,7 +25,7 @@ function About() {
             <div className="shrink-0 self-start">
               {about.photo ? (
                 <img
-                  src={about.photo}
+                  src={`${import.meta.env.BASE_URL}${about.photo.replace(/^\//, '')}`}
                   alt={about.photoAlt}
                   className="w-32 h-32 md:w-40 md:h-40 object-cover border border-accent/30"
                 />

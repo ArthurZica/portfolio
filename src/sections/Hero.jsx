@@ -22,7 +22,7 @@ function Hero() {
       {/* Glow de fundo */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none"
-        style={{ background: 'radial-gradient(circle, rgba(0,255,65,0.05) 0%, transparent 65%)' }}
+        style={{ background: 'radial-gradient(circle, rgba(74,222,128,0.05) 0%, transparent 65%)' }}
       />
 
       <div className="relative z-10 w-full max-w-2xl flex flex-col gap-5">
