@@ -1,4 +1,6 @@
 import skills from '../data/skills'
+import Typewriter from '../components/Typewriter'
+import useReveal from '../hooks/useReveal'
 
 function SkillGroup({ category, items }) {
   return (
@@ -27,19 +29,21 @@ function SkillGroup({ category, items }) {
 }
 
 function Skills() {
+  const [ref, visible] = useReveal()
+
   return (
     <section
       id="skills"
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >
-      <div className="w-full max-w-5xl">
+      <div ref={ref} className={`reveal w-full max-w-5xl ${visible ? 'is-visible' : ''}`}>
 
         {/* Cabeçalho */}
         <div className="mb-6">
           <p className="text-xs text-terminal-muted">
             <span className="text-accent-light">visitor@portfolio</span>
             <span className="text-terminal-muted">:~$</span>
-            <span className="text-terminal-text/60"> cat skills.json</span>
+            <Typewriter text=" cat skills.json" speed={45} started={visible} className="text-terminal-text/60" />
           </p>
         </div>
 

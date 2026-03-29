@@ -1,20 +1,24 @@
 import about from '../data/about'
 import TerminalWindow from '../components/TerminalWindow'
+import Typewriter from '../components/Typewriter'
+import useReveal from '../hooks/useReveal'
 
 function About() {
+  const [ref, visible] = useReveal()
+
   return (
     <section
       id="sobre"
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >
-      <div className="w-full max-w-4xl">
+      <div ref={ref} className={`reveal w-full max-w-4xl ${visible ? 'is-visible' : ''}`}>
 
         {/* Cabeçalho */}
         <div className="mb-6">
           <p className="text-xs text-terminal-muted">
             <span className="text-accent-light">visitor@portfolio</span>
             <span className="text-terminal-muted">:~$</span>
-            <span className="text-terminal-text/60"> cat about.txt</span>
+            <Typewriter text=" cat about.txt" speed={45} started={visible} className="text-terminal-text/60" />
           </p>
         </div>
 
@@ -77,5 +81,6 @@ function About() {
     </section>
   )
 }
+
 
 export default About

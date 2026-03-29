@@ -1,20 +1,24 @@
 import contactLinks from '../data/contact'
 import TerminalWindow from '../components/TerminalWindow'
+import Typewriter from '../components/Typewriter'
+import useReveal from '../hooks/useReveal'
 
 function Contact() {
+  const [ref, visible] = useReveal()
+
   return (
     <section
       id="contato"
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >
-      <div className="w-full max-w-xl">
+      <div ref={ref} className={`reveal w-full max-w-xl ${visible ? 'is-visible' : ''}`}>
 
         {/* Cabeçalho */}
         <div className="mb-6">
           <p className="text-xs text-terminal-muted">
             <span className="text-accent-light">visitor@portfolio</span>
             <span className="text-terminal-muted">:~$</span>
-            <span className="text-terminal-text/60"> ./contact.sh</span>
+            <Typewriter text=" ./contact.sh" speed={45} started={visible} className="text-terminal-text/60" />
           </p>
           <p className="text-xs text-terminal-muted mt-1">
             <span className="text-accent/40">// aberto a oportunidades, freelas e parcerias</span>

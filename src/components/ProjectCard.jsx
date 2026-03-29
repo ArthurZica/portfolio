@@ -30,7 +30,7 @@ function ProjectCard({ title, description, techs, github, demo, image }) {
 
         {/* Conteúdo */}
         <div className="flex flex-col flex-1 gap-4 p-5">
-          <h3 className="text-sm font-bold text-accent-light glow-sm">{title}</h3>
+          <h3 data-text={title} className="glitch-title text-sm font-bold text-accent-light glow-sm">{title}</h3>
 
           <p className="text-xs text-terminal-text/60 leading-relaxed flex-1">
             <span className="text-terminal-muted">&gt; </span>

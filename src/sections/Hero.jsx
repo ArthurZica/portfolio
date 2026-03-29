@@ -1,4 +1,5 @@
 import social from '../data/social'
+import Typewriter from '../components/Typewriter'
 
 const icons = {
   github: (
@@ -31,7 +32,7 @@ function Hero() {
         <p className="text-xs text-terminal-muted">
           <span className="text-accent-light">visitor@portfolio</span>
           <span className="text-terminal-muted">:~$</span>
-          <span className="text-terminal-text/60"> whoami</span>
+          <Typewriter text=" whoami" speed={60} delay={200} className="text-terminal-text/60" />
         </p>
 
         {/* Nome com cursor */}
